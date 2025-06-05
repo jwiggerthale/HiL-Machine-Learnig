@@ -5,7 +5,7 @@
 
 
 ### Operator	 
-** Tasks
+**Tasks
 -   Inspect objects
 -   Inspect images
 -   Label images
