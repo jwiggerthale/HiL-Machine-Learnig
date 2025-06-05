@@ -5,13 +5,13 @@
 
 
 ### Operator	 
-**Tasks
+**Tasks**
 -   Inspect objects
 -   Inspect images
 -   Label images
 -   Draw bounding boxes	
 
-** Needs: 
+** Needs** 
 - Clear visualization
 - Qucik labeling and drawing of bounding boxes
 - Intuitive hotkeys
@@ -19,23 +19,23 @@
 	       
 
 ### Data Scientist	
-** Tasks: 
+**Tasks**
 - Supervise model
 - Retrain model
 - Analyze performance
 
-** Needs: 
+**Needs** 
 - Aceess to annotation versions of images
 - Logs
 - Operators' feedback
       
 	       
 ### Admin  	        
-** Tasks:
+**Tasks**
 - Permission management
 - Maintenance	Backup 
 
-** Needs: 
+**Needs** 
 - Audit trail
 
 	
