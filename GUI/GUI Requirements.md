@@ -1,14 +1,13 @@
-#Requirements for GUI
+# Requirements for GUI
 
-##Roles
+## Roles
 
----------------------------------------------------------------------------------------------------
 
-Role	          |   Tasks                   |    	  Needs
 
----------------------------------------------------------------------------------------------------
+Operator	 
+		|   Tasks                   |    	  Needs
 
-Operator	 |  Inspect objects	      |       Clear visualization
+		|  Inspect objects	      |       Clear visualization
 
       	        |  Inspect images	      |      Qucik labeling and drawing of bounding boxes
 	       
@@ -18,24 +17,30 @@ Operator	 |  Inspect objects	      |       Clear visualization
 	       
 ---------------------------------------------------------------------------------------------------
 
-Data Scientist	|  Supervise model	        |         Aceess to annotation versions of images
+Data Scientist	
+		|   Tasks                   |    	  Needs
 
-	              |  Retrain model	          |         Logs
+		|  Supervise model	        |         Aceess to annotation versions of images
+
+	        |  Retrain model	          |         Logs
 	       
-	              |  Analyze performance	    |         Operators feedback
+	        |  Analyze performance	    |         Operators feedback
 	       
 ---------------------------------------------------------------------------------------------------
-Admin  	        |  Permission management	  |          Audit trail
+Admin  	        
+		|   Tasks                   |    	  Needs
+
+		|  Permission management	  |          Audit trail
 
                 |  Maintenance	Backup      |
 ---------------------------------------------------------------------------------------------------
 	
 
-##Workflows
+## Workflows
 
-###Phase: Coexistence 	
+### Phase: Coexistence 	
 
-###Workflow:
+### Workflow:
 
 1) Inspection of object
 2) Labeling and classification
@@ -49,18 +54,18 @@ Admin  	        |  Permission management	  |          Audit trail
     - Change label (Dropdown menu)
     - Add image to dataset
 
-###Phase: Retraining of model	
+### Phase: Retraining of model	
 
-###Workflow:  
-
+### Workflow:  
+ 
   1) Trigger retraining
   2) Visualization of progress
   3) Visualization of performance metrics (before and after)
 
  
-###Phase: Cross checking
+### Phase: Cross checking
 
-###Workflow: 
+### Workflow: 
 
   1) Selection of image to be validated (random or high uncertainty)
 	2) Information of operator
@@ -70,7 +75,7 @@ Admin  	        |  Permission management	  |          Audit trail
       - Add image to dataset"
 
 
-##Requirements
+## Requirements
 
 1) Image visualization	
   - Show original image 
