@@ -11,7 +11,7 @@
 -   Label images
 -   Draw bounding boxes	
 
-** Needs** 
+**Needs** 
 - Clear visualization
 - Qucik labeling and drawing of bounding boxes
 - Intuitive hotkeys
