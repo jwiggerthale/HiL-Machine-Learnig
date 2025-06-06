@@ -1,3 +1,14 @@
+This folder contains the code implementing GUI and labeling tool allowing the operator to efficiently: 
+1) Label and relabel images
+2) Compare model predictions with his labels
+4) Recognize how uncertain the model is
+5) Get explanations for model predictions
+6) Enlarge the dataset
+7) Retrain the model
+
+Within the folder, we seperate the implementation of the GUI and the implementation of the labeling tool.
+The labeling tool is implemented firstly and added to the GUI after the interface itself is satisfying. 
+
 # Requirements for GUI
 
 ## Roles
