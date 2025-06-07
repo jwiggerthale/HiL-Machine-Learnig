@@ -22,3 +22,6 @@ To facilitate these tasks, the repo implements:
 
 ## Operator Validation
 The final phase of the process consists of operator validation. The phase can be entered when the model achieves the desired performance on the givem task. In this phase, the operator's workload is efficiently reduced by the model. Here the model inspects every single object. Whenever the model is uncertain or an object is classified as defect, the image is added to a task queue. Additionally, random images are added to that queue. Whenever the operator has time, he checks images from the task queue and relabels them if necessary. The task queue is implemented in the GUI. By randomly adding images to the queue although the model is not uncertain, performance degradation is avoided. 
+
+
+![image](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/Process%20Overview.png)
