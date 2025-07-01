@@ -1,1 +1,10 @@
-Here we 
+Here we have implemented Yolo model on the dataset.
+colab link - https://colab.research.google.com/drive/1mXVIyZFfWh0w8iXD_R55V389NHjpFmXR?usp=sharing
+google drive link for yolo format labels- https://drive.google.com/drive/folders/1kQ7FsfGflKIMptwm5QbbTC5wl-cS-LrE?usp=sharing
+tranined model with different epochs is below
+train with 6 epoch
+train2 with 15 epoch
+train3 with 25 epoch
+train4 with 50 epoch
+
+googledrive link to run  - https://drive.google.com/file/d/1zTfjLv1FZUW2d9Dyo7avfCz5dOl0jmGo/view?usp=sharing
