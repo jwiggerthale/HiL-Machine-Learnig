@@ -72,6 +72,8 @@ train_dataset, test_dataset, Class_dict, train_count, test_count = get_dataset(i
                                                                                 batch_size = batch_size, 
                                                                                 train_share  = train_split)
 
+class_dict = {v: k for k, v in Class_dict.items()}
+
 #Create base model, adapt to the model architecture you use as baseline
 base_model = tf.keras.applications.ResNet50(weights='resnet50_base.h5',
                                             include_top=False,
