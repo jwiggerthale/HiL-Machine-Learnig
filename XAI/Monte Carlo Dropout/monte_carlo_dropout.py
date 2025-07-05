@@ -100,7 +100,7 @@ for i in range(3):
     plt.imshow(keras.preprocessing.image.array_to_img(ims[i]))
     pred_class = class_dict[pred_classes[i] + 1]
     true_class = class_dict[np.argmax(label[4][i]) + 1]
-    plt.title(f'True Class: {true_class} - Predicted Class: {pred_class}')
+    plt.title(f'True Class: {true_class} - Predicted Class: {pred_class} - Uncertainty: {pred_un[i]}')
     x_min, y_min, x_max, y_max = x_min_pred[i]*224, y_min_pred[i]*224, x_max_pred[i]*224, y_max_pred[i]*224
     plt.plot([x_min, x_min, x_max, x_max, x_min], [y_min, y_max, y_max, y_min, y_min], color = "red", label = 'Predicted Bounding Box')
     x_min, y_min, x_max, y_max = labels[0][i]*224, labels[1][i]*224, labels[2][i]*224, labels[3][i]*224
@@ -109,7 +109,4 @@ for i in range(3):
     plt.savefig('Model predictions.png')
 
 
-#Visualize model uncertainty for all class predictions
-plt.scatter(x = np.arange(len(pred_un)), y= pred_un)
-plt.savefig('Class uncertainties')
 
