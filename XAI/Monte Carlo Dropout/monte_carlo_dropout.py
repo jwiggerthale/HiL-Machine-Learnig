@@ -2,10 +2,16 @@
 #It is just a baseline for the user interface
 #Here, model predictions are plotted and saved as image
 #Implementation of mc_predict function is main component wich is used for further components of the project
+
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
+from utils.data_utils import get_dataset
 
 '''
 Function which takes model for monte carlo dropout prediction
@@ -55,6 +61,16 @@ def mc_predict(model,
 
     return x_min_pred, x_min_un, y_min_pred, y_min_un, x_max_pred, x_max_un, y_max_pred, y_max_un, pred_classes, pred_un
 
+#Get dataset
+im_path  = "/data/HiL_XAI/SteelLocation/images/*/*.jpg"
+xml_path = "/data/HiL_XAI/SteelLocation/label/*.xml"
+batch_size = 32
+train_split = 0.8
+
+train_dataset, test_dataset, Class_dict, train_count, test_count = get_dataset(im_path = im_path, 
+                                                                                label_path=xml_path, 
+                                                                                batch_size = batch_size, 
+                                                                                train_share  = train_split)
 
 #Create base model, adapt to the model architecture you use as baseline
 base_model = tf.keras.applications.ResNet50(weights='resnet50_base.h5',
