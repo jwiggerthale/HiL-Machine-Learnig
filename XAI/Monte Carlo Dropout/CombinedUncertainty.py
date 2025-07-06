@@ -28,18 +28,17 @@ uns['vgg_xc_identical'] =  uns['xc_class_pred'] == uns['vgg_class_pred']
 uns['not_warned'] = uns['both_wrong'] & uns['vgg_xc_identical']#True when both models predict wrongly and both models predict identical class
 
 #Examine how false positives and false negatives develop for different uncertainty weightings
-weights_xc = np.arange(-10, 10, 1)
+weights_xc = np.arange(-1, 1.1, 0.1)
 model_stats= []
 for weight_xc in weights_xc:
     uns['combined_uncertainty'] = uns['xc_class_un_norm'] * weight_xc + uns['vgg_class_un_norm'] * (1 - weight_xc)
     uns['combined_uncertainty'] = uncertainty_norm(uns['combined_uncertainty'])
     both_wrong = uns[uns['both_wrong'] == True]
-    not_warned = both_wrong[both_wrong['not_warned'] == True]
-    warned = both_wrong[both_wrong['not_warned'] == False]
+    both_correct = uns[uns['all_correct'] == True]
+    not_warned = both_wrong[both_wrong['not_warned'] == True]#Operator not warned and both models predict identical (wrong) class
     q1 = both_wrong['combined_uncertainty'].quantile(0.25)
-    num_false_positives = len(not_warned[not_warned['combined_uncertainty'] > q1])
-    num_false_negatives = len(warned[warned['combined_uncertainty'] < q1])
-    #plot results (optional)
+    num_false_negatives = len(not_warned[not_warned['combined_uncertainty'] < q1])#Operator still not warned and both models predict identical (wrong) class
+    num_false_positives = len(both_correct[both_correct['combined_uncertainty'] > q1])#Operator warned althoug both models predict correctly
     fig = px.box(both_wrong, y = 'combined_uncertainty', title = f'Combined Uncertainty - Exception Weight: {weight_xc} - {num_false_positives} False Positive -  {num_false_negatives} False Negatives')
     fig.show()
     model_stats.append([weight_xc, num_false_positives, num_false_negatives])
