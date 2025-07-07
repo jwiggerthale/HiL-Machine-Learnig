@@ -1,3 +1,9 @@
+#This script serves to examine how false positive and false negative rate develop as the weighting factor for both models is adapted
+#In particular, 
+##1) we define a weighting function to calcualte combined uncertainty score for vgg16 and xception model
+##2) vary the weighting factor 
+##3) examine how fpr and fnr develop
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
