@@ -18,13 +18,13 @@ Using the implementation, we calculate the uncertainty of models for all samples
 
 We then visualize the results (files with prefix 03). The distribution of uncertainties of the VGG16-model is shown below: 
 
-![alt text](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/XAI/Monte%20Carlo%20Dropout/VGG16Uncertainties.png)
+![alt text](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/XAI/Monte%20Carlo%20Dropout/03_VGG16Uncertainties.png)
 
 It can be seen that the uncertainties on wrong predictions are in general way higher than on corect predictions. This property allows for good seperation between correct and wrong predictions by looking at the uncertainty. 
 
 In contrast, model uncertainties of Xception model do not show such a clear trend: 
 
-![alt text](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/XAI/Monte%20Carlo%20Dropout/XceptionUncertainties.png)
+![alt text](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/XAI/Monte%20Carlo%20Dropout/03_XceptionUncertainties.png)
 
 The figure shows that uncertainties for wrong prediction tend to be higher but the differences between wrong and correct predictions are not as clear. Therefore, we use the VGG16-uncertainty scores as indicator when to inform the operator. 
 
