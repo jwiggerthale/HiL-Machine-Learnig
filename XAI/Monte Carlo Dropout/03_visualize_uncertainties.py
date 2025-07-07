@@ -1,3 +1,5 @@
+#This file uses the uncertainties created in 02_get_uncertainties to create boxplots from the results
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
