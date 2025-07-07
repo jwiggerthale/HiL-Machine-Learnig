@@ -1,3 +1,9 @@
+#This file uses the uncertainties calculated in 02 to define the best thresholds for:
+#    a) vgg16-uncertainty 
+#    b) combined uncertainty
+#in order to minimize fpr and tpr
+#Note: the exact values to be chosen depend on the criticality of the use case
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
