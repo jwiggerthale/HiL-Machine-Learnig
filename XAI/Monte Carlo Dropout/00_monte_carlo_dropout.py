@@ -16,7 +16,7 @@ Returns:
 '''
 def mc_predict(model, 
                x, 
-              num_samples):
+              num_samples: int = 20):
     class_preds = []
     x_min_preds = []
     y_min_preds = []
