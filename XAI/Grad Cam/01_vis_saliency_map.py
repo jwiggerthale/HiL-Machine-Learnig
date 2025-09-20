@@ -20,6 +20,38 @@ import datetime
 from compute_saliency_map import compute_grads
 
 
+'''
+function which normalizes gradients / image
+call with: 
+   img: np.array --> image ( gradients to be normalized
+'''
+def norm_flat_image(img):
+    grads_norm = img[:,:,0]+ img[:,:,1]+ img[:,:,2]
+    grads_norm = (grads_norm - tf.reduce_min(grads_norm))/ (tf.reduce_max(grads_norm)- tf.reduce_min(grads_norm))
+    return grads_norm
+
+'''
+Function which visualizes grad cam heatmap, image and image with heatmap overlay
+Call with: 
+   img1 --> GradCAM heatmap
+   img2 --> Image
+   vmin: float = 0.3
+   vmax: float = 0.7
+   mix_val: float = 2 --> ratio of heatmap and image in third plot
+'''
+def plot_maps(img1, img2,vmin=0.3,vmax=0.7, mix_val=2):
+    fig, axes = plt.subplots(1, 3, figsize=(15,45))
+    axes[0].imshow(img1,vmin=vmin, vmax=vmax, cmap="gray")
+    axes[0].set_title('GradCAM Heatmap')
+    axes[0].axis("off")
+    axes[1].imshow(img2, cmap = "gray")
+    axes[1].axis("off")
+    axes[1].set_title('Image')
+    axes[2].imshow(img1*mix_val+img2/mix_val, cmap = "gray" )
+    axes[2].axis("off")
+    axes[2].set_title('Image + GradCAM Overlay')
+
+
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
     try:
@@ -73,3 +105,4 @@ model = keras.models.Model(inputs = inputs, outputs = out)
 
 ims, labels = test_dataset.take(1)
 pred, grads = compute_grads(model, ims)
+plot_maps(norm_flat_image(grads[0]), norm_flat_image(ims[0]))
