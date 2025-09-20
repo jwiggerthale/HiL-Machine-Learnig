@@ -1,4 +1,4 @@
-#This script implements uses the function compute_grads from script calculate_saliency_map to examine images where model predicts wrongly
+#This script uses the function compute_grads from script calculate_saliency_map to examine images where model predicts wrongly
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
