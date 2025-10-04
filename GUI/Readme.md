@@ -124,6 +124,9 @@ The GUI workflow can be started running main.py
 ### Start Frame
 ![image]([(https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/GUI%20Start.jpg)])
 
+![image](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/Process%20Overview.png)
+
+
 ### Visualization Frame
 Initial visualization: 
 ![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Prediction%20Good.jpg])
