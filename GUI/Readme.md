@@ -122,34 +122,32 @@ The GUI workflow can be started running main.py
 ## Impressions of the GUI
 
 ### Start Frame
-![image]([(https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/GUI%20Start.jpg)])
-
-![image](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/Process%20Overview.png)
+![Start Frame]((https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/GUI%20Start.jpg))
 
 
 ### Visualization Frame
 Initial visualization: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Prediction%20Good.jpg])
+![Initial Visualization](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Prediction%20Good.jpg)
 
 Saliency overlay: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Saliency1.jpg])
+![Saliency Overlay](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Saliency1.jpg)
 
-Relabeling: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Relabel2.jpg])
+Relabeling popup: 
+![Relabeling popup](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Relabel2.jpg)
 
 Save image: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/ImageSaved.jpg])
+![Save Image Info](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/ImageSaved.jpg)
 
 ### Retrain Frame
 
 Main retrain frame:
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Retraining.jpg])
+![Main Retrain Frame](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Retraining.jpg)
 
 Model copmarison: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Model%20comparison.jpg])
+![Model Copmarison](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Model%20comparison.jpg)
 
 History comparison: 
-![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/History%20Comparison.jpg])
+![History Comparison](https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/History%20Comparison.jpg)
 
 
 
