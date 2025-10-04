@@ -6,10 +6,9 @@ This folder contains the code implementing GUI and labeling tool allowing the op
 6) Enlarge the dataset
 7) Retrain the model
 
-Within the folder, we seperate the implementation of the GUI and the implementation of the labeling tool.
-The labeling tool is implemented firstly and added to the GUI after the interface itself is satisfying. 
+The GUI workflow can be started running main.py
 
-# Requirements for GUI
+# The GUI
 
 ## Roles
 
@@ -111,17 +110,48 @@ The labeling tool is implemented firstly and added to the GUI after the interfac
   - Copy bounding box
   - Resize bounding box
   - Move bounding box
-7) Hotkeys
-  - Accept
-  - Correct
-  - Retrain
-  - One per class to change class
-8) Dataset extension
-  - Create json/ coco entry for new data point automatically
+7) Dataset extension
+  - Create xml entry for new data point automatically
   - Task queue for cross checking	Order images by priority (uncertainty)
-9) Retraining
+8) Retraining
   - Automatic start after x new images
   - Start by operator
   - Visualization of performance metrics
   - Visualization of progress"
+
+## Impressions of the GUI
+
+### Start Frame
+![image]([(https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/GUI%20Start.jpg)])
+
+### Visualization Frame
+Initial visualization: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Prediction%20Good.jpg])
+
+Saliency overlay: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Saliency1.jpg])
+
+Relabeling: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Relabel2.jpg])
+
+Save image: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/ImageSaved.jpg])
+
+### Retrain Frame
+
+Main retrain frame:
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Retraining.jpg])
+
+Model copmarison: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/Model%20comparison.jpg])
+
+History comparison: 
+![image]([https://github.com/jwiggerthale/HiL-Machine-Learnig/blob/main/GUI/images/History%20Comparison.jpg])
+
+
+
+
+
+
+
 
